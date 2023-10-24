@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid-Gallary</title>
+    <style>
+        body {
+            background-color: crimson;
+        }
+
+        #grid {
+            width: 90%;
+            margin: 0 auto;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        div[class*="box"] {
+            height: 200px;
+        }
+
+        .box-1 {
+            grid-column: 1/4;
+            grid-row: 1/2;
+        }
+
+        .box-4 {
+            grid-column: 2/4;
+        }
+
+        .box-6 {
+            grid-column: 1/3;
+        }
+
+        .box-7 {
+            grid-column: 3/5;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="grid">
+        <div class="box-1">
+            <img src="../grid/img/pexels-bas-masseus-1074535.jpg" alt="">
+        </div>
+        <div class="box-2">
+            <img src="../grid/img/pexels-dom-j-310435.jpg" alt="">
+        </div>
+        <div class="box-3">
+            <img src="../grid/img/pexels-işıl-18792374.jpg" alt="">
+        </div>
+        <div class="box-4">
+            <img src="../grid/img/pexels-joseph-costa-1462935.jpg" alt="">
+        </div>
+        <div class="box-5">
+            <img src="../grid/img/pexels-ming-zimik-5669205.jpg" alt="">
+        </div>
+        <div class="box-6">
+            <img src="../grid/img/pexels-monstera-production-5635102.jpg" alt="">
+        </div>
+        <div class="box-7">
+            <img src="../grid/img/pexels-polina-chistyakova-18252719.jpg" alt="">
+        </div>
+    </section>
+</body>
+
+</html>
