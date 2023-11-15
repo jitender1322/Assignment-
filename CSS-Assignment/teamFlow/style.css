@@ -370,3 +370,207 @@ footer {
     padding: 15px 80px;
     font-size: 14px;
 }
+
+.btn {
+    color: #7259FA;
+    background-color: #ECE5FF;
+    padding: 13px 40px;
+    font-size: 16px;
+    border: none;
+    display: none;
+}
+
+
+
+
+@media (max-width:576px) {
+    .list {
+        display: none;
+    }
+
+    .main-text {
+        width: 100%;
+    }
+
+    .main-text h2 {
+        font-size: 35px;
+        margin: 20px 75px;
+    }
+
+    .main-text p {
+        padding: 0 75px;
+    }
+
+    .b-1 {
+        display: none;
+    }
+
+    .sub {
+        flex-direction: column;
+        margin: 10px 75px;
+    }
+
+    .sub button {
+        margin: 10px 0;
+        padding: 15px 20px;
+    }
+
+    .sub input {
+        padding: 15px 80px 15px 20px;
+    }
+
+    .brands {
+        margin: 0;
+    }
+
+    .brands ul li:nth-child(5) {
+        display: none;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-40 {
+        width: 100%;
+        margin: 0;
+    }
+
+    .col-60 {
+        width: 100%;
+    }
+
+    .op-1 {
+        flex-direction: column-reverse;
+        margin-top: 20px;
+    }
+
+    .op-1 span {
+        width: 100%;
+        height: 5px;
+    }
+
+    .text {
+        text-align: center;
+    }
+
+    div[class*="op"] h4 {
+        font-size: 18px;
+    }
+
+    div[class*="op"] p {
+        font-size: 16px;
+        padding: 0 50px;
+    }
+
+    #terms {
+        text-align: center;
+    }
+
+    #term h2 {
+        font-size: 30px;
+    }
+
+    .card {
+        margin: 50px 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-33 {
+        width: 100%;
+        text-align: center;
+        margin: 20px 0px;
+        padding: 0 100px;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .btn {
+        display: inline;
+    }
+
+    .hour {
+        flex-direction: column-reverse;
+        margin: 30px 0;
+    }
+
+    .col-50 {
+        width: 100%;
+    }
+
+    .hour h4 {
+        font-size: 30px;
+        margin: 20px 30px;
+    }
+
+    .customer span {
+        display: none;
+    }
+
+    .review {
+        margin: 0;
+        padding: 0;
+    }
+
+    .review h4 {
+        margin: 0 100px;
+        padding: 0 30px;
+        font-size: 18px;
+    }
+
+    .review p {
+        margin: 0;
+        padding: 20px 75px;
+        line-height: 20px;
+        font-size: 14px;
+    }
+
+    .day {
+        margin: 0;
+    }
+
+    .person,
+    .jp {
+        display: block;
+    }
+
+    .pp {
+        display: none;
+    }
+
+    .banner {
+        flex-direction: column;
+        margin: 20px 0;
+        padding: 30px 0;
+    }
+
+    .banner h4 {
+        margin: 10px 20px;
+        font-size: 25px;
+    }
+
+    .store img {
+        margin: 10px;
+    }
+
+    .foot {
+        flex-direction: column;
+    }
+
+    .foot ul li {
+        display: none;
+    }
+
+    .foot ul li:nth-child(1) {
+        display: block;
+    }
+
+    .view li {
+        display: block !important;
+        width: 150px;
+    }
+}
