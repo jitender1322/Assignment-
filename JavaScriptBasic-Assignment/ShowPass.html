@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Password</title>
+
+</head>
+
+<body>
+    <input type="password" id="upass">
+    <button onclick="show()">show</button>
+
+
+    <script>
+        function show() {
+            let pass = document.getElementById('upass').getAttribute('type');
+            if (pass == 'password') {
+                document.getElementById('upass').setAttribute('type', 'text')
+            }
+            else {
+                document.getElementById('upass').setAttribute('type', 'password')
+            }
+        }
+    </script>
+</body>
+
+</html>

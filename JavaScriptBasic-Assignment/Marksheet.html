@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Result</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #result {
+            width: 60%;
+            margin: 0 auto;
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        input {
+            border: none;
+            outline: none;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="result">
+        <table border="1" cellspacing="0" width="100%">
+            <tr>
+                <th>S.No.</th>
+                <th>Subject</th>
+                <th>Marks Out of 100</th>
+            </tr>
+            <tr>
+                <th>1.</th>
+                <th>Hindi</th>
+                <th><input type="number" id="hindi"></th>
+            </tr>
+            <tr>
+                <th>2.</th>
+                <th>English</th>
+                <th><input type="number" id="english"></th>
+            </tr>
+            <tr>
+                <th>3.</th>
+                <th>Social Science</th>
+                <th><input type="number" id="sst"></th>
+            </tr>
+            <tr>
+                <th>4.</th>
+                <th>Math</th>
+                <th><input type="number" id="math"></th>
+            </tr>
+            <tr>
+                <th>5.</th>
+                <th>Science</th>
+                <th><input type="number" id="sci"></th>
+            </tr>
+            <tr>
+                <th colspan="2">Total</th>
+                <th id="show"></th>
+            </tr>
+            <tr>
+                <th colspan="2">Percentage</th>
+                <th id="per"></th>
+            </tr>
+
+        </table>
+        <button onclick="result()">Show Result</button>
+        <button onclick="reloadPage()">clear</button>
+        <h2 id="grades"></h2>
+    </section>
+
+
+
+
+    <script>
+        function result() {
+            let eng = parseFloat(document.getElementById("english").value)
+            let hindi = parseFloat(document.getElementById("hindi").value)
+            let ss = parseFloat(document.getElementById("sst").value)
+            let math = parseFloat(document.getElementById("math").value)
+            let sci = parseFloat(document.getElementById("sci").value)
+
+            let print;
+
+            let show = eng + hindi + sci + ss + math;
+            document.getElementById("show").innerText = show;
+
+            let per = (eng + hindi + sci + ss + math) / 500 * 100;
+            document.getElementById("per").innerText = per;
+
+
+
+            if (per < 33) {
+                print = "You Are failed";
+                document.getElementById("grades").innerText = print;
+            }
+            else if (per <= 55) {
+                print = "you have to improve";
+                document.getElementById("grades").innerText = print;
+            }
+            else if (per <= 75) {
+                print = "you are avrage";
+                document.getElementById("grades").innerText = print;
+            }
+            else if (per <= 90) {
+                print = "you are doing well";
+                document.getElementById("grades").innerText = print;
+            }
+            else if (per = isNaN) {
+                print = "Please enter your valid marks first";
+                document.getElementById("grades").innerText = print;
+            }
+            else {
+                print = "you nailed it bro";
+                document.getElementById("grades").innerText = print;
+            }
+        }
+
+        function reloadPage() {
+            location.reload();
+        }
+    </script>
+</body>
+
+</html>
