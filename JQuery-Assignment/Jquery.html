@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Assignment</title>
+    <style>
+        body {
+            background-color: crimson;
+            color: white;
+        }
+
+        .qna {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 45px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 27px;
+        }
+
+        p {
+            font-size: 19px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="qna">
+        <h1>JQuery Assignment</h1>
+        <h2>1. What is jQuery?</h2>
+        <p>jQuery is a lightweight, "write less, do more", JavaScript library. The purpose of jQuery is to make it much
+            easier to
+            use JavaScript on your website. jQuery takes a lot of common tasks that require many lines of JavaScript
+            code to
+            accomplish, and wraps them into methods that you can call with a single line of code.</p>
+        <hr>
+
+        <h2>2. How to Apply CSS Using JQuery, How to Add Class and Remove Class in
+            Jquery, JQuery Animation?</h2>
+        <p>The css() method sets or returns one or more style properties for the selected elements. <br>
+            $("p").css("background-color");
+        </p>
+        <p>jQuery - Get and Set CSS Classes <br>
+            addClass() - Adds one or more classes to the selected elements. <br>
+            removeClass() - Removes one or more classes from the selected elements.</p>
+        <p>The jQuery animate() method is used to create custom animations. Syntax:
+            $(selector).animate({params},speed,callback);
+            The required params parameter defines the CSS properties to be animated.</p>
+        <hr>
+
+        <h2>3. Event bubbling tickling example</h2>
+        <div class="great-grand-parent">
+            great-grand-parent
+            <div class="grand-parent">
+                grand-parent
+                <div class="parent">
+                    parent
+                    <div class="chlid-1">
+                        child
+                    </div>
+                    <div class="child-2">
+                        child
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.great-grand-parent').children().css({ border: '3px solid aqua' })
+            $('.grand-parent').children().css({ border: '3px solid red' })
+            $('.parent').children().css({ border: '3px solid green' })
+        });
+    </script>
+</body>
+
+</html>
