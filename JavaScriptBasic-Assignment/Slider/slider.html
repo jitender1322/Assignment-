@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: aqua;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .box {
+            width: 600px;
+            height: 300px;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+
+        button {
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: 800;
+            border-radius: 5px;
+        }
+
+        img {
+            width: 50%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Slider</h1>
+    <div class="box">
+        <img src="./img/img1.jpg" id="pic" alt="">
+    </div>
+    <button id="perv" onclick="min()">perv</button>
+    <button id="next" onclick="add()">next</button>
+
+
+
+    <script>
+        let img = ['./img/img1.jpg', './img/img2.jpg', './img/img3.jpg', './img/img4.jpg', './img/img5.jpg', './img/img6.jpg', './img/img7.jpg'];
+        let box = document.getElementById('pic');
+        let i = 0;
+        box.src = img[i]
+        function add() {
+            i++;
+            if (i > img.length) {
+                i = 0;
+            }
+            box.src = img[i];
+        }
+        function min() {
+            i--;
+            if (i < 0) {
+                i = img.length - 1;
+            }
+            box.src = img[i];
+        }
+    </script>
+</body>
+
+</html>
