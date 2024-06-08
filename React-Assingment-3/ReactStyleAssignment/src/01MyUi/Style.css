@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.titlebar button {
+    color: rgba(78, 73, 73, 0.737);
+}
+
+.navbar img {
+    width: 10%;
+}
+
+.banner {
+    background: url('./img/store.jpg')no-repeat center center/cover;
+}
