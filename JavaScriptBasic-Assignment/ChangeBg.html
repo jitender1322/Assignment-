@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: #E4E6C3;
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .box {
+            width: 250px;
+            height: 200px;
+            border-radius: 15px;
+            margin: 0 auto;
+            background-color: #F7F7F2;
+            padding: 90px 0;
+            font-weight: 700;
+        }
+
+        button {
+            padding: 10px 20px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            background-color: #F7F7F2;
+            cursor: pointer;
+            margin: 15px 0;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <p class="cName">#F7F7F2</p>
+        </div>
+        <button class="btn">Change</button>
+    </div>
+    <script>
+        let color = ['#3B413C', '#F991CC', '#75485E', '#21897E', '#84A9C0', '#A62639'];
+        let box = document.querySelector('.box');
+        let btn = document.querySelector('.btn');
+        let p = document.querySelector('.cName');
+
+        btn.addEventListener('click', change)
+
+        function change() {
+            let random = Math.floor(Math.random() * color.length);
+            box.style.backgroundColor = color[random];
+            p.textContent = color[random];
+        }
+    </script>
+</body>
+
+</html>

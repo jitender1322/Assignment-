@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: #775253;
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+            padding-top: 40px;
+            color: white;
+        }
+
+        .box {
+            width: 60%;
+            height: 500px;
+            border-radius: 15px;
+            margin: 0 auto;
+            background-color: #351431;
+            padding: 20px 0;
+            font-weight: 700;
+        }
+
+        button {
+            padding: 10px 0px;
+            width: 100%;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            background-color: #775253;
+            cursor: pointer;
+            color: white;
+            margin: 15px 0px;
+            font-weight: 700;
+        }
+
+        label {
+            display: block;
+            margin: 5px 0;
+        }
+
+        input {
+            margin: 5px 0;
+            width: 300px;
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+            outline: none;
+            border-radius: 7px;
+            padding: 10px;
+        }
+
+        form {
+            text-align: start;
+            width: 40%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        span {
+            font-size: 12px;
+            display: block;
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>Sign Up</h2>
+            <form>
+                <label>Username</label>
+                <input id="name" type="text" oninput='changeName()' placeholder="Enter your Name">
+                <span class="nameWarn"></span>
+                <label>Email</label>
+                <input id="mail" type="email" placeholder="Enter your Email">
+                <label>Password</label>
+                <input oninput="changePass()" id="password" type="text" placeholder="Enter your Password">
+                <span class="passWarn"></span>
+                <label>Confirm Password</label>
+                <input oninput="changeCpass()" id="Cpass" type="text" placeholder="Confirm your Password">
+                <span class="cpassWarn"></span>
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        let name = document.getElementById('name');
+        let mail = document.getElementById('mail');
+        let password = document.getElementById('password');
+        let Cpassword = document.getElementById('Cpass');
+        let btn = document.querySelector(".btn");
+
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            console.log(name.value);
+        });
+
+        function changeName() {
+            if (name.value.length >= 3 && name.value.length <= 30) {
+                document.querySelector('.nameWarn').textContent = ''
+            } else {
+                document.querySelector('.nameWarn').textContent = 'Username must be between 3 adn 25 characters.'
+            }
+        }
+        function changePass() {
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+            if (passwordRegex.test(password.value)) {
+                document.querySelector('.passWarn').textContent = ''
+            } else {
+                document.querySelector('.passWarn').textContent = `Password must be at least 8 characters that include atleast 1 lowercase character, 1 uppercase
+                character, 1 number and one special character(!@#$ %^&*) `
+            }
+        }
+        function changeCpass() {
+            if (password.value = '') {
+                document.querySelector('.cpassWarn').textContent = 'Please enter the password first!'
+            }
+            else if (Cpassword.value == password.value) {
+                document.querySelector('.cpassWarn').textContent = ''
+            } else {
+                document.querySelector('.cpassWarn').textContent = 'Please enter the password again'
+            }
+        }
+    </script>
+</body>
+
+</html>
